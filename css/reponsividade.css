@@ -7,7 +7,7 @@
    body{
    
     overflow: hidden;
-    background-image: url(../img/img/imagem1800.png);
+    background-image: url(../img/imagem1800.png);
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
@@ -40,7 +40,7 @@
 @media (max-width:480px){
   body{ 
    
-    background-image: url(../img/img/imagem600.png);
+    background-image: url(../img/imagem600.png);
     background-repeat: no-repeat;
     
   }
