@@ -1,10 +1,15 @@
 import Header from "@/src/components/Header"
 import TypeIt from "typeit-react";
 import { Roboto } from "next/font/google"
-
+import { Alegreya } from "next/font/google"
 const fontRoboto = Roboto({
   subsets: ['latin'],
   weight: "900"
+});
+
+const fontAlegreya = Alegreya({
+  subsets : ["latin"],
+  weight : "900"
 });
 
 export default function Home() {
@@ -13,13 +18,28 @@ export default function Home() {
       <div className="w-screen h-[55rem] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/imgs/backGround.gif)' }}>
         <div className="w-96 h-full flex justify-end flex-col text-center">
           <TypeIt
-            className="text-slate-200 font-extrabold text-xl"
-            options={{
-              strings: ["I'm Developer"],
-              speed: 200,
-              waitUntilVisible: true,
-              loop: true
-            }}></TypeIt>
+            className={`${fontAlegreya.className} text-[#00ffffc9] font-extrabold text-[30px]`}
+            getBeforeInit={
+              (animation) => {
+                animation
+                  .type("Programmer", {delay : 500})
+                  .pause(400)
+                  .empty()
+                  .type("Web Developer", {delay : 500})
+                  .pause(400, {delay : 500})
+                  .move(-9, {delay : 500})
+                  .delete(5, {delay : 500})
+                  .move(12, {delay : 500})
+                  .type(`<span style="color: #F22786;"> Front-End </span>`, {delay :500})
+                  .delete(10, {delay : 500})
+                  .pause(500)
+                  .type(`<span style="color: #ff7c02c9;"><em><strong> Back-End</strong></em><span>`, {delay : 500})
+
+                  return animation;
+              } 
+            }
+
+            ></TypeIt>
           <img src="/imgs/perfil.png" className="w-full animate-personaMove my-10" alt="teste" />
         </div>
         <div className="bg-gradient-to-b from-midnight-blue to-black w-full h-[30rem] flex justify-center text-white">
