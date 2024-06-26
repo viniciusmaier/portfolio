@@ -1,41 +1,31 @@
-export default function Tools(){
-    return(
-        <article className="text-center">
-            <div>   
-                  <div>
-                      <h2>Tools</h2>
-                      <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-                        debitis odit impedit molestias. Impedit ex optio repellendus sequi
-                        modi illum voluptatem commodi, aut distinctio officiis quo
-                        voluptates veritatis quisquam expedita.
-                      </p>
-                  </div>
-                <section>  
-                    <div>
-                        <i></i>
-                        <h3>
-                          HTML
-                        </h3>
-                    </div>
-                    <div>
-                        <i></i>-Name
-                        <h3>
-                          CSS
-                        </h3>
-                    </div>
-                    <div>
-                      <i></i>-Name
-                      <h3>
-                        JS
-                      </h3>
-                    </div>
-                    <div>
-                      <i></i>
-                      <h3>GIT</h3>
-                    </div>
-                </section> 
-          </div>
-        </article>
-    );
+export default function Tools() {
+  return (
+    <article className="text-center text-white min-w-[80rem] h-full flex flex-col justify-evenly">
+      <h2>Abilities</h2>
+      <ul className="flex relative  flex-row justify-center h-[29.5rem] mr-4">
+        <li className="absolute bg-black h-full w-2/6 border-2 border-solid rounded-lg m-1 z-40">
+          <i></i>
+          <h3>
+            HTML
+          </h3>
+        </li>
+        <li className="absolute h-full w-2/6 border-2 border-solid rounded-lg m-1 z-30 rotate-3">
+          <i></i>
+          <h3 className="hidden">
+            CSS
+          </h3>
+        </li>
+        <li className="absolute h-full w-2/6 border-2 border-solid rounded-lg m-1 z-20 rotate-6">
+          <i></i>
+          <h3 className="hidden">
+            JS
+          </h3>
+        </li>
+        <li className="absolute h-full w-2/6 border-2 border-solid rounded-lg m-1 z-10 rotate-[9deg]">
+          <i></i>
+          <h3 className="hidden">GIT</h3>
+        </li>
+      </ul>
+    </article >
+  );
 }

@@ -8,7 +8,7 @@ const fontAlegreya = Alegreya({
 
 export default function HeaderPage() {
   return (
-    <header className={`w-screen h-12 bg-[#050D0C] bg-opacity-90 fixed`}>
+    <header className={`w-screen h-12 bg-[#050D0C] bg-opacity-90 fixed z-20`}>
       <div className={`flex justify-center items-center h-full outline outline-[#7e244e96] outline-offset-4 ${fontAlegreya.className} text-xl`}>
         <div className="flex items-center justify-between w-full max-w-screen-xl px-4">
           <div className={`text-[#F22786] flex flex-row gap-2`}>
