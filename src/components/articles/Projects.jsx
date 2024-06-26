@@ -1,6 +1,6 @@
 export default function Projects(){
     return(
-        <article class="container__projects-position">
+      <article class="container__projects-position">
         <section class="container__block-projects">
           <div class="block-content">
               <h2>Projects</h2>

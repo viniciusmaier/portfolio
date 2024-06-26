@@ -1,5 +1,5 @@
 import { transform } from "next/dist/build/swc";
-import { BiFontFamily } from "react-icons/bi";
+import { BiColor, BiFontFamily } from "react-icons/bi";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -51,24 +51,48 @@ const config: Config = {
           "0%": {
             color: "#F22786",
           },
-          "25%": {
-            color: "#468C8C",
+          "10%": {
+            color: "#E856A6",
+          },
+          "20%": {
+            color: "#D885C5",
+          },
+          "30%": {
+            color: "#CAB4E3",
+          },
+          "40%": {
+            color: "#B7E3FF",
           },
           "50%": {
-            color: "#050D0C",
+            color: "#A5C1D6",
           },
-          "75%": {
-            color: "#568C1F",
+          "60%": {
+            color: "#9590AD",
           },
-          "100%": {
-            color: "#95D930",
+          "70%": {
+            color: "#847E85",
+          },
+          "80%": {
+            color: "#736C5C",
+          },
+          "90%": {
+            color: "#625A34",
+          },
+          "100": {
+            color: "#515809",
           },
         },
       },
       //RGB -- Letter
       animation: {
         personaMove: "personaMove 5s ease-in-out infinite",
-        rgbLetter: "rgb 3s ease-in-out infinite",
+        rgbLetterAboutA: "rgb 8s ease-in-out infinite",
+        rgbLetterAboutB: "rgb 8.01s ease-in-out infinite",
+        rgbLetterAboutO: "rgb 8.02s ease-in-out infinite",
+        rgbLetterAboutU: "rgb 8.03s ease-in-out infinite",
+        rgbLetterAboutT: "rgb 8.04s ease-in-out infinite",
+        rgbLetterAboutM: "rgb 8.05s ease-in-out infinite",
+        rgbLetterAboutE: "rgb 8.07s ease-in-out infinite",
       },
     },
   },
