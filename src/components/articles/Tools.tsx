@@ -1,31 +1,55 @@
+
+
+type Abilities = {
+  tools : String,
+  domain_img : String,
+}
+
+const abilities : Abilities[] = [
+  {
+    tools : 'HTML',
+    domain_img : 'teste',
+  },
+  {
+    tools : 'CSS',
+    domain_img : 'teste',
+  },
+  { 
+    tools : 'JS',
+    domain_img : 'teste',
+  },
+  {
+    tools : 'GIT',
+    domain_img : 'teste',
+  }
+]
+function handleButtonTools(index : number) {
+  abilities.splice(abilities.length, 0, (abilities.splice(index, 1)[0]))  
+  return;
+}
+
 export default function Tools() {
   return (
     <article className="text-center text-white min-w-[80rem] h-full flex flex-col justify-evenly">
       <h2>Abilities</h2>
-      <ul className="flex relative  flex-row justify-center h-[29.5rem] mr-4">
-        <li className="absolute bg-black h-full w-2/6 border-2 border-solid rounded-lg m-1 z-40">
-          <i></i>
-          <h3>
-            HTML
-          </h3>
-        </li>
-        <li className="absolute h-full w-2/6 border-2 border-solid rounded-lg m-1 z-30 rotate-3">
-          <i></i>
-          <h3 className="hidden">
-            CSS
-          </h3>
-        </li>
-        <li className="absolute h-full w-2/6 border-2 border-solid rounded-lg m-1 z-20 rotate-6">
-          <i></i>
-          <h3 className="hidden">
-            JS
-          </h3>
-        </li>
-        <li className="absolute h-full w-2/6 border-2 border-solid rounded-lg m-1 z-10 rotate-[9deg]">
-          <i></i>
-          <h3 className="hidden">GIT</h3>
-        </li>
+      <div className="flex flex-row justify-center w-full ">
+      <button>LEFT</button>
+      <ul className="flex relative w-[30rem] flex-row justify-center h-[29.5rem] mr-4">
+        {abilities.map((tools, index) => 
+            <li className={`absolute bg-black h-full w-3/4 border-2 border-solid rounded-lg m-1 z-[${index}0]  rotate-${index}`}>
+              <i></i> 
+              <h3>
+                {tools.tools}
+              </h3>
+            </li>)
+        }
       </ul>
+      <button>RIGHT</button>
+      </div>
     </article >
   );
+}
+
+function setState(arg0: number) {
+  throw new Error("Function not implemented.")
 }
