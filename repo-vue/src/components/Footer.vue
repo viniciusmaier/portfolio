@@ -1,4 +1,4 @@
- <template>
+ <!-- <template>
     <footer>
         <section class="container__contacts">
             <div class="container__block-contacts">
@@ -10,4 +10,4 @@
             <div></div>
         </section>
     </footer>
-</template>
+</template> -->

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <article class="container__projects-position">
     <section class="container__block-projects">
       <div class="block-content">
@@ -17,4 +17,4 @@
       </section>
     </section>
   </article>
-</template>
+</template> -->
