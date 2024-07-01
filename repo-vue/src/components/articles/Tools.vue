@@ -30,14 +30,19 @@ function handleButtonTools(index : number) {
 
 <template>
     <article class="text-center text-white min-w-[80rem] h-full flex flex-col justify-evenly">
-      <h2>Abilities</h2>
+      <h2 class="">Abilities</h2>
       <div class="flex flex-row justify-center w-full ">
       <button>LEFT</button>
-      <ul class="flex relative w-[30rem] flex-row justify-center h-[29.5rem] mr-4">
-            <li class="absolute bg-black h-full w-3/4 border-2 border-solid rounded-lg m-1 z-[${index}0]  rotate-${index}">
+      <ul class="flex relative w-[30rem] flex-row justify-center h-[29.5rem] mr-4"> 
+            <li 
+              v-for="tools in abilities"
+              :key="tools.id"
+              :class="`absolute bg-black h-full w-3/4 border-2 border-solid rounded-lg m-1 z-${tools.id}0  rotate rotate-${0+tools.id} rotate`"
+              >
               <i></i> 
-              <h3></h3>
+              <h3>{{ tools.name }}</h3>
             </li>
+           
       </ul>
       <button>RIGHT</button>
       </div>
@@ -46,7 +51,33 @@ function handleButtonTools(index : number) {
 
 <script>
   export default {
-     name : 'Tools'
+     name : 'Tools',
+     data(){
+      return {
+        abilities : [
+                                  {
+                                    id : 1,
+                                    name : 'HTML',
+                                    domain_img : 'teste',
+                                  },
+                                  {
+                                    id : 2,
+                                    name : 'CSS',
+                                    domain_img : 'teste',
+                                  },
+                                  { 
+                                    id : 3,
+                                    name : 'JS',
+                                    domain_img : 'teste',
+                                  },
+                                  {
+                                    id : 4,
+                                    name : 'GIT',
+                                    domain_img : 'teste',
+                                  }
+                                ]
+      }
+     }
   }
 </script>
 
